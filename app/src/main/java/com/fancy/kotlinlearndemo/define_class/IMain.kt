@@ -1,4 +1,4 @@
-package com.fancy.kotlinlearndemo
+package com.fancy.kotlinlearndemo.define_class
 
 /**
  * Created by Fancy on 2017/6/12.
