@@ -4,7 +4,7 @@ import com.fancy.kotlinlearndemo.extension_fun.sout
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-//简单的
+//简单的字段监听
 class PersonDelegate : ReadWriteProperty<Person2, String> {
     var value: String = ""
     override fun getValue(thisRef: Person2, property: KProperty<*>): String {
