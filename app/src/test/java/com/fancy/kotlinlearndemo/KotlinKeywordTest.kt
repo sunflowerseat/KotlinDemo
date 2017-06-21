@@ -1,7 +1,11 @@
 package com.fancy.kotlinlearndemo
 
 import com.fancy.kotlinlearndemo.define_class.OpenClass
+import com.fancy.kotlinlearndemo.define_class.Person
+import com.fancy.kotlinlearndemo.define_class.Person2
+import com.fancy.kotlinlearndemo.extension_fun.sout
 import org.junit.Test
+import java.io.File
 
 /**
  * Created by Fancy on 2017/6/12.
@@ -67,5 +71,32 @@ class KotlinKeywordTest {
         for (item in list) {
             println(item)
         }
+    }
+
+    @Test
+    fun testData() {
+//        var file = File("E:\\hello.txt")
+//        file.exists().sout()
+        val stream = File("E:\\hello.txt").inputStream()
+        stream.buffered().reader().use { reader ->
+            println(reader.readText())
+        }
+    }
+
+    @Test
+    fun main() {
+        val data=Person2("fancy",27);
+        println(data.age)
+        println(data.name)
+        println(data.toString())
+    }
+
+    @Test
+    fun testObservable() {
+        var p2 = Person2()
+        p2.name = "my name"
+        p2.name = "my name2"
+        p2.name = "my name3"
+        p2.sout()
     }
 }
